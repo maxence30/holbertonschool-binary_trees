@@ -1,11 +1,8 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "binary_trees.h"
 
 /**
  * print_num - Prints a number
- *
- * @n: Number to be printed
+ * @n: Number to print
  */
 void print_num(int n)
 {
@@ -15,7 +12,7 @@ void print_num(int n)
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
@@ -30,6 +27,7 @@ int main(void)
     root->right->right = binary_tree_node(root->right, 512);
 
     binary_tree_print(root);
-    binary_tree_postorder(root, &print_num);
+    binary_tree_postorder(root, print_num);
+
     return (0);
 }
