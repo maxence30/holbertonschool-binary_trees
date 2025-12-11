@@ -2,24 +2,24 @@
 #include <stdlib.h>
 
 /**
- * binary_tree_node - Crée un nouveau nœud d’arbre binaire
- * @parent: Pointeur vers le parent du nouveau nœud
- * @value: Valeur à mettre dans le nouveau nœud
+ * binary_tree_node - Creates a new binary tree node
+ * @parent: Pointer to the parent node
+ * @value: Value to store in the new node
  *
- * Return: Pointeur vers le nouveau nœud, ou NULL en cas d'échec
+ * Return: Pointer to the new node, or NULL on failure
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *new;
+	binary_tree_t *new;
 
-    new = malloc(sizeof(binary_tree_t));
-    if (new == NULL)
-        return (NULL);
+	new = malloc(sizeof(binary_tree_t));
+	if (new == NULL)
+		return (NULL);
 
-    new->n = value;
-    new->parent = parent;
-    new->left = NULL;
-    new->right = NULL;
+	new->n = value;
+	new->parent = parent;
+	new->left = NULL;
+	new->right = NULL;
 
-    return (new);
+	return (new);
 }
